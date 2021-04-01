@@ -11,25 +11,25 @@ public class Main {
         LinkedList<Rom> roms = new LinkedList<>();
 
         //TODO: сделаю так, чтобы данные попадали в список из файла
-        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Core i7", "Intel", "Socket H", "GeForce", "3200"));
-        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Core i9", "Intel", "Socket H", "GeForce1", "4800"));
-        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Ryzen 5", "AMD", "AM4", "Radeon", "1600"));
+        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Core i5 11500", "Intel", "LGA 1200", "GeForce GTX 1650 ti", "3200"));
+        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Core i7 11700", "Intel", "Intel H470", "GeForce GT 710", "2400"));
+        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Ryzen 5 1600", "AMD", "SocketAM4", "GeForce GT 1030", "2666"));
 
-        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "LPX", "ХЗ", "Socket H", "1650", "Sata 3"));
-        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "LPX", "ХЗ", "AM4", "1650", "Sata 4"));
-        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "LPX", "ХЗ", "Socket H", "1350", "Sata 3"));
+        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "X370 PRO4", "Asrock", "SocketAM4", "DIMM", "Sata 3"));
+        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "H510M-HVS", "Asrock", "LGA 1200", "DIMM", "Sata 3"));
+        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "B450M DS3H V2", "GIGABYTE", "Intel H470", "DIMM", "Sata 3"));
 
-        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce", "Nvidia", "GeForce"));
-        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "Radeon", "AMD", "Radeon"));
-        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce", "Nvidia", "GeForce1"));
+        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce GT 1030", "MSI", "GeForce GT 1030"));
+        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce GT 710", "Gigabyte", "GeForce GT 710"));
+        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce GTX 1650 ti", "Nvidia", "GeForce GTX 1650 ti"));
 
-        rams.add(new Ram("4" + Ram.ramCount, "RAM", "DDR4", "ХЗ", "3200", "1650"));
-        rams.add(new Ram("4" + Ram.ramCount, "RAM", "DDR3", "ХЗ", "4800", "1350"));
-        rams.add(new Ram("4" + Ram.ramCount, "RAM", "DDRx3", "ХЗ", "1600", "1650"));
+        rams.add(new Ram("4" + Ram.ramCount, "RAM", "Zeus Dragon KM-LD4-3200-16GHD", "Kingmax", "3200", "DIMM"));
+        rams.add(new Ram("4" + Ram.ramCount, "RAM", "Radeon R7 Performance Series R748G2606U2S-UO", "AMD", "2666", "DIMM"));
+        rams.add(new Ram("4" + Ram.ramCount, "RAM", "Ballistix BL8G26C16U4W", "Crucial", "2400", "DIMM"));
 
-        roms.add(new Rom("5" + Rom.romCount, "ROM", "WD", "ХЗ", "Sata 4"));
-        roms.add(new Rom("5" + Rom.romCount, "ROM", "WD1", "ХЗ", "Sata 3"));
-        roms.add(new Rom("5" + Rom.romCount, "ROM", "WD2", "ХЗ", "Sata 3"));
+        roms.add(new Rom("5" + Rom.romCount, "ROM", "WD Caviar Blue WD10EZEX", "Western Digital", "Sata 3"));
+        roms.add(new Rom("5" + Rom.romCount, "ROM", "A2000 SA2000M8/250G", "Kingston", "Sata 3"));
+        roms.add(new Rom("5" + Rom.romCount, "ROM", "A400 SA400S37/240G", "Kingston", "Sata 3"));
 
 
         //Открытие потока ввода
