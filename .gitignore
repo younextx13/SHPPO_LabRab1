@@ -1,2 +1,4 @@
 # Project exclude paths
 /out/
+/.idea/
+/SHPPO_LabRab1.iml
