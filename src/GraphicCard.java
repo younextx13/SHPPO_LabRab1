@@ -9,7 +9,7 @@ public class GraphicCard extends Component {
 	}
 
 	public boolean connect(Cpu other) {
-		return this.conCpuGrCa.equals(other.conCpuGrCa);
+		return this.conCpuGrCa.equalsIgnoreCase(other.conCpuGrCa);
 	}
 
 	@Override

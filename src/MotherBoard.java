@@ -14,15 +14,15 @@ public class MotherBoard extends Component {
 	}
 
 	public boolean connect(Cpu other) {
-		return this.conCpuMoBo.equals(other.conCpuMoBo);
+		return this.conCpuMoBo.equalsIgnoreCase(other.conCpuMoBo);
 	}
 	
 	public boolean connect(Ram other) {
-		return this.conMoBoRam.equals(other.conMoBoRam);
+		return this.conMoBoRam.equalsIgnoreCase(other.conMoBoRam);
 	}
 	
 	public boolean connect(Rom other) {
-		return this.conMoBoRom.equals(other.conMoBoRom);
+		return this.conMoBoRom.equalsIgnoreCase(other.conMoBoRom);
 	}
 
 	@Override

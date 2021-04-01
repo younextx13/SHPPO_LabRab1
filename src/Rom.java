@@ -9,7 +9,7 @@ public class Rom extends Component {
 	}
 
 	public boolean connect(MotherBoard other) {
-		return this.conMoBoRom.equals(other.conMoBoRom);
+		return this.conMoBoRom.equalsIgnoreCase(other.conMoBoRom);
 	}
 
 	@Override

@@ -11,11 +11,11 @@ public class Ram extends Component {
 	}
 
 	public boolean connect(Cpu other) {
-		return this.conCpuRam.equals(other.conCpuRam);
+		return this.conCpuRam.equalsIgnoreCase(other.conCpuRam);
 	}
 	
 	public boolean connect(MotherBoard other) {
-		return this.conMoBoRam.equals(other.conMoBoRam);
+		return this.conMoBoRam.equalsIgnoreCase(other.conMoBoRam);
 	}
 
 	@Override

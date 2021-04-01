@@ -14,15 +14,15 @@ public class Cpu extends Component {
 	}
 
 	public boolean connect(GraphicCard other) {
-		return this.conCpuGrCa.equals(other.conCpuGrCa);
+		return this.conCpuGrCa.equalsIgnoreCase(other.conCpuGrCa);
 	}
-	
+
 	public boolean connect(MotherBoard other) {
-		return this.conCpuMoBo.equals(other.conCpuMoBo);
+		return this.conCpuMoBo.equalsIgnoreCase(other.conCpuMoBo);
 	}
 	
 	public boolean connect(Ram other) {
-		return this.conCpuRam.equals(other.conCpuRam);
+		return this.conCpuRam.equalsIgnoreCase(other.conCpuRam);
 	}
 
 	@Override

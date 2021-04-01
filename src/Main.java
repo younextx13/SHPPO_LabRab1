@@ -35,7 +35,7 @@ public class Main {
         //Открытие потока ввода
         Scanner scanner = new Scanner(System.in);
         String input;    //Временная ссылка для хранения
-		System.out.println("""
+        System.out.println("""
           
          	-Ну и зачем ты мне!? Что ты можешь???
          	-Что я могу? Я могу собрать для тебя ПК из комплектующих, которые ты сам добавишь) 
@@ -53,7 +53,7 @@ public class Main {
                     5 - ROM
                     """);
             System.out.println("\nВведите 'Номер' выбранного вами типа, чтобы занести его в список комплектующих.");
-			System.out.println("Введите 's', чтобы просмотреть текущий список.");
+            System.out.println("Введите 's', чтобы просмотреть текущий список.");
             System.out.println("Введите 'q', чтобы прекратить ввод и увидеть варианты сборки.");
             System.out.print("Ввод: ");
 
@@ -92,19 +92,15 @@ public class Main {
                                 cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", name, manufacturerInformation, conCpuMoBo, conCpuGrCa, conCpuRam));
                             }
 
-                            case ("d") -> {
-                                cpus.removeLast();
-                            }
+                            case ("d") -> cpus.removeLast();
 
-                            case ("b") -> {
-                                //Когда закончили ввод, то устанавливает флаг - выход
-                                input = "Назад";
-                            }
+                            case ("b") -> //Когда закончили ввод, то устанавливает флаг - выход
+                                    input = "Назад";
 
-							default -> {
-								System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
-								System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
-							}
+                            default -> {
+                                System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
+                                System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
+                            }
                         }
                     } while (!input.equals("Назад"));
                 }
@@ -120,7 +116,7 @@ public class Main {
                         System.out.println("\n\nВведите 'a', чтобы добавить в список новую Mother Board.");
                         System.out.println("Введите 'b', чтобы вернуться к выбору компонентов.");
                         System.out.println("Введите 'd', чтобы удалить последнюю добавленную Mother Board.");
-						System.out.print("Ввод: ");
+                        System.out.print("Ввод: ");
 
                         input = scanner.nextLine();
                         switch (input) {
@@ -143,19 +139,16 @@ public class Main {
                                 moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", name, manufacturerInformation, conCpuMoBo, conMoBoRam, conMoBpRom));
                             }
 
-                            case ("d") -> {
-                                moBos.removeLast();
-                            }
+                            case ("d") -> moBos.removeLast();
 
-                            case ("b") -> {
-                                //Когда закончили ввод, то устанавливает флаг - выход
-                                input = "Назад";
-                            }
+                            //Когда закончили ввод, то устанавливает флаг - выход
+                            case ("b") -> input = "Назад";
 
-							default -> {
-								System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
-								System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
-							}
+
+                            default -> {
+                                System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
+                                System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
+                            }
                         }
                     } while (!input.equals("Назад"));
                 }
@@ -188,19 +181,16 @@ public class Main {
                                 grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", name, manufacturerInformation, conCpuGrCa));
                             }
 
-                            case ("d") -> {
-                                grCas.removeLast();
-                            }
+                            case ("d") -> grCas.removeLast();
 
-                            case ("b") -> {
-                                //Когда закончили ввод, то устанавливает флаг - выход
-                                input = "Назад";
-                            }
+                            //Когда закончили ввод, то устанавливает флаг - выход
+                            case ("b") -> input = "Назад";
 
-							default -> {
-								System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
-								System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
-							}
+
+                            default -> {
+                                System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
+                                System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
+                            }
                         }
                     } while (!input.equals("Назад"));
                 }
@@ -216,7 +206,7 @@ public class Main {
                         System.out.println("\n\nВведите 'a', чтобы добавить в список новую RAM.");
                         System.out.println("Введите 'b', чтобы вернуться к выбору компонентов.");
                         System.out.println("Введите 'd', чтобы удалить последнюю добавленную RAM.");
-						System.out.print("Ввод: ");
+                        System.out.print("Ввод: ");
 
                         input = scanner.nextLine();
                         switch (input) {
@@ -236,19 +226,15 @@ public class Main {
                                 rams.add(new Ram("4" + Ram.ramCount, "RAM", name, manufacturerInformation, conCpuRam, conMoBoRam));
                             }
 
-                            case ("d") -> {
-                                rams.removeLast();
-                            }
+                            case ("d") -> rams.removeLast();
 
-                            case ("b") -> {
-                                //Когда закончили ввод, то устанавливает флаг - выход
-                                input = "Назад";
-                            }
+                            //Когда закончили ввод, то устанавливает флаг - выход
+                            case ("b") -> input = "Назад";
 
-							default -> {
-								System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
-								System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
-							}
+                            default -> {
+                                System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
+                                System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
+                            }
                         }
                     } while (!input.equals("Назад"));
                 }
@@ -264,7 +250,7 @@ public class Main {
                         System.out.println("\n\nВведите 'a', чтобы добавить в список новую ROM.");
                         System.out.println("Введите 'b', чтобы вернуться к выбору компонентов.");
                         System.out.println("Введите 'd', чтобы удалить последнюю добавленную ROM.");
-						System.out.print("Ввод: ");
+                        System.out.print("Ввод: ");
 
                         input = scanner.nextLine();
                         switch (input) {
@@ -281,79 +267,71 @@ public class Main {
                                 roms.add(new Rom("5" + Rom.romCount, "ROM", name, manufacturerInformation, conMoBoRom));
                             }
 
-                            case ("d") -> {
-                                roms.removeLast();
+                            case ("d") -> roms.removeLast();
+
+                            //Когда закончили ввод, то устанавливает флаг - выход
+                            case ("b") -> input = "Назад";
+
+                            default -> {
+                                System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
+                                System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
                             }
-
-                            case ("b") -> {
-                                //Когда закончили ввод, то устанавливает флаг - выход
-                                input = "Назад";
-                            }
-
-
-							default -> {
-								System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
-								System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
-							}
                         }
 
                     } while (!input.equals("Назад"));
                 }
 
 
-				case ("s") -> {
-					System.out.println("\nТекущий список комплектующих: ");
+                case ("s") -> {
+                    System.out.println("\nТекущий список комплектующих: ");
 
-					System.out.println("\nСписок CPU: ");
-					for(Cpu cpu : cpus){System.out.println(cpu);}
+                    System.out.println("\nСписок CPU: ");
+                    for(Cpu cpu : cpus){System.out.println(cpu);}
 
-					System.out.println("\nСписок Mother Board: ");
-					for(MotherBoard moBo : moBos){System.out.println(moBo);}
+                    System.out.println("\nСписок Mother Board: ");
+                    for(MotherBoard moBo : moBos){System.out.println(moBo);}
 
-					System.out.println("\nСписок Graphic Card: ");
-					for(GraphicCard grCa : grCas){System.out.println(grCa);}
+                    System.out.println("\nСписок Graphic Card: ");
+                    for(GraphicCard grCa : grCas){System.out.println(grCa);}
 
-					System.out.println("\nСписок RAM: ");
-					for(Ram ram : rams){System.out.println(ram);}
+                    System.out.println("\nСписок RAM: ");
+                    for(Ram ram : rams){System.out.println(ram);}
 
-					System.out.println("\nСписок ROM: ");
-					for(Rom rom : roms){System.out.println(rom);}
-				}
-
-
-                case ("q") -> {
-                    //Когда закончили ввод, то устанавливает флаг - выход
-                    input = "Выход";
+                    System.out.println("\nСписок ROM: ");
+                    for(Rom rom : roms){System.out.println(rom);}
                 }
 
+                //Когда закончили ввод, то устанавливает флаг - выход
+                case ("q") -> input = "Выход";
 
-				default -> {
-					System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
-					System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
-				}
+
+
+                default -> {
+                    System.out.println("\n\n!!!ПРОИЗОШЛА ОШИБОЧКА ВВОДА!!!");
+                    System.out.println("!!!     ПОПРОБУЙ ЗАНОВО    !!!\n\n");
+                }
             }
         } while (!input.equals("Выход"));
 
         int count = 0;
-		for(Cpu cpu : cpus){
-			for(MotherBoard moBo : moBos){
-				for(GraphicCard grCa : grCas){
-					for(Ram ram : rams){
-						for(Rom rom : roms){
-							if (cpu.connect(grCa) && cpu.connect(moBo) && cpu.connect(ram) && moBo.connect(cpu) && moBo.connect(ram) && moBo.connect(rom)){
-								count++;
-								System.out.println("\nСборка ПК №" + count);
-								System.out.println(cpu);
-								System.out.println(moBo);
-								System.out.println(grCa);
-								System.out.println(ram);
-								System.out.println(rom + "\n");
-							}
-						}
-					}
-				}
-			}
-		}
-
+        for(Cpu cpu : cpus){
+            for(MotherBoard moBo : moBos){
+                for(GraphicCard grCa : grCas){
+                    for(Ram ram : rams){
+                        for(Rom rom : roms){
+                            if (cpu.connect(grCa) && cpu.connect(moBo) && cpu.connect(ram) && moBo.connect(ram) && moBo.connect(rom)){
+                                count++;
+                                System.out.println("\nСборка ПК №" + count);
+                                System.out.println(cpu);
+                                System.out.println(moBo);
+                                System.out.println(grCa);
+                                System.out.println(ram);
+                                System.out.println(rom + "\n");
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
