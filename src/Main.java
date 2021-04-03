@@ -1,8 +1,9 @@
+import java.io.*;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         LinkedList<Cpu> cpus = new LinkedList<>();
         LinkedList<MotherBoard> moBos = new LinkedList<>();
@@ -10,26 +11,35 @@ public class Main {
         LinkedList<Ram> rams = new LinkedList<>();
         LinkedList<Rom> roms = new LinkedList<>();
 
-        //TODO: сделаю так, чтобы данные попадали в список из файла
-        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Core i5 11500", "Intel", "LGA 1200", "GeForce GTX 1650 ti", "3200"));
-        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Core i7 11700", "Intel", "Intel H470", "GeForce GT 710", "2400"));
-        cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", "Ryzen 5 1600", "AMD", "SocketAM4", "GeForce GT 1030", "2666"));
+        Scanner sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\cpu.txt"));
+        while(sc.hasNext()){
+            String[] paramCpu = sc.nextLine().split(", ");
+            cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", paramCpu[0], paramCpu[1], paramCpu[2], paramCpu[3], paramCpu[4]));
+        }
 
-        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "X370 PRO4", "Asrock", "SocketAM4", "DIMM", "Sata 3"));
-        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "H510M-HVS", "Asrock", "LGA 1200", "DIMM", "Sata 3"));
-        moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", "B450M DS3H V2", "GIGABYTE", "Intel H470", "DIMM", "Sata 3"));
+        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\motherBoard.txt"));
+        while(sc.hasNext()){
+            String[] paramMoBo = sc.nextLine().split(", ");
+            moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", paramMoBo[0], paramMoBo[1], paramMoBo[2], paramMoBo[3], paramMoBo[4]));
+        }
 
-        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce GT 1030", "MSI", "GeForce GT 1030"));
-        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce GT 710", "Gigabyte", "GeForce GT 710"));
-        grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", "GeForce GTX 1650 ti", "Nvidia", "GeForce GTX 1650 ti"));
+        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\graphicCard.txt"));
+        while(sc.hasNext()){
+            String[] paramGrCa = sc.nextLine().split(", ");
+            grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", paramGrCa[0], paramGrCa[1], paramGrCa[2]));
+        }
 
-        rams.add(new Ram("4" + Ram.ramCount, "RAM", "Zeus Dragon KM-LD4-3200-16GHD", "Kingmax", "3200", "DIMM"));
-        rams.add(new Ram("4" + Ram.ramCount, "RAM", "Radeon R7 Performance Series R748G2606U2S-UO", "AMD", "2666", "DIMM"));
-        rams.add(new Ram("4" + Ram.ramCount, "RAM", "Ballistix BL8G26C16U4W", "Crucial", "2400", "DIMM"));
+        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\ram.txt"));
+        while(sc.hasNext()){
+            String[] paramRam = sc.nextLine().split(", ");
+            rams.add(new Ram("4" + Ram.ramCount, "RAM", paramRam[0], paramRam[1], paramRam[2], paramRam[3]));
+        }
 
-        roms.add(new Rom("5" + Rom.romCount, "ROM", "WD Caviar Blue WD10EZEX", "Western Digital", "Sata 3"));
-        roms.add(new Rom("5" + Rom.romCount, "ROM", "A2000 SA2000M8/250G", "Kingston", "Sata 3"));
-        roms.add(new Rom("5" + Rom.romCount, "ROM", "A400 SA400S37/240G", "Kingston", "Sata 3"));
+        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\rom.txt"));
+        while(sc.hasNext()){
+            String[] paramRom = sc.nextLine().split(", ");
+            roms.add(new Rom("5" + Rom.romCount, "ROM", paramRom[0], paramRom[1], paramRom[2]));
+        }
 
 
         //Открытие потока ввода

@@ -1,0 +1,3 @@
+GeForce GT 1030, MSI, GeForce GT 1030
+GeForce GT 710, Gigabyte, GeForce GT 710
+GeForce GTX 1650 ti, Nvidia, GeForce GTX 1650 ti

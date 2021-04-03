@@ -1,0 +1,3 @@
+Core i5 11500, Intel, LGA 1200, GeForce GTX 1650 ti, 3200
+Core i7 11700, Intel, Intel H470, GeForce GT 710, 2400
+Ryzen 5 1600, AMD, SocketAM4, GeForce GT 1030, 2666

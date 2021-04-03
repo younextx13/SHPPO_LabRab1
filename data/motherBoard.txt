@@ -1,0 +1,3 @@
+X370 PRO4, Asrock, SocketAM4, DIMM, Sata 4
+H510M-HVS, Asrock, LGA 1200, DIMM, Sata 2
+B450M DS3H V2, GIGABYTE, Intel H470, DIMM, Sata 3
