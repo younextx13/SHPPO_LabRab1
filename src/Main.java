@@ -11,31 +11,31 @@ public class Main {
         LinkedList<Ram> rams = new LinkedList<>();
         LinkedList<Rom> roms = new LinkedList<>();
 
-        Scanner sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\cpu.txt"));
+        Scanner sc = new Scanner(new File("data\\cpu.txt"));
         while(sc.hasNext()){
             String[] paramCpu = sc.nextLine().split(", ");
             cpus.add(new Cpu("1" + Cpu.cpuCount, "Processor", paramCpu[0], paramCpu[1], paramCpu[2], paramCpu[3], paramCpu[4]));
         }
 
-        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\motherBoard.txt"));
+        sc = new Scanner(new File("data\\motherBoard.txt"));
         while(sc.hasNext()){
             String[] paramMoBo = sc.nextLine().split(", ");
             moBos.add(new MotherBoard("2" + MotherBoard.moBoCount, "Mother Board", paramMoBo[0], paramMoBo[1], paramMoBo[2], paramMoBo[3], paramMoBo[4]));
         }
 
-        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\graphicCard.txt"));
+        sc = new Scanner(new File("data\\graphicCard.txt"));
         while(sc.hasNext()){
             String[] paramGrCa = sc.nextLine().split(", ");
             grCas.add(new GraphicCard("3" + GraphicCard.grCaCount, "Graphic Card", paramGrCa[0], paramGrCa[1], paramGrCa[2]));
         }
 
-        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\ram.txt"));
+        sc = new Scanner(new File("data\\ram.txt"));
         while(sc.hasNext()){
             String[] paramRam = sc.nextLine().split(", ");
             rams.add(new Ram("4" + Ram.ramCount, "RAM", paramRam[0], paramRam[1], paramRam[2], paramRam[3]));
         }
 
-        sc = new Scanner(new File("C:\\Users\\yOu_NExT_XIII\\Desktop\\IdeaProjects\\SHPPO_LabRab1\\data\\rom.txt"));
+        sc = new Scanner(new File("data\\rom.txt"));
         while(sc.hasNext()){
             String[] paramRom = sc.nextLine().split(", ");
             roms.add(new Rom("5" + Rom.romCount, "ROM", paramRom[0], paramRom[1], paramRom[2]));
